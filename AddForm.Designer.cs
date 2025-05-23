@@ -33,15 +33,15 @@
             label3 = new Label();
             txtModell = new TextBox();
             cmbMarke = new ComboBox();
-            textBox1 = new TextBox();
+            txtPreis = new TextBox();
             lblAntrieb = new Label();
             lblExtras = new Label();
             rdoBenzin = new RadioButton();
             rdoDiesel = new RadioButton();
             chkKlima = new CheckBox();
             chkSitzheizung = new CheckBox();
-            button1 = new Button();
-            button2 = new Button();
+            btnCreate = new Button();
+            btnCancel = new Button();
             lblBaujahr = new Label();
             cmbBaujahr = new ComboBox();
             SuspendLayout();
@@ -86,19 +86,18 @@
             // cmbMarke
             // 
             cmbMarke.FormattingEnabled = true;
-            cmbMarke.Items.AddRange(new object[] { "BMW", "Mercedes", "Toyota", "Tesla", "VW" });
+            cmbMarke.Items.AddRange(new object[] { "Audi", "BMW", "Mercedes", "Toyota", "Tesla", "VW" });
             cmbMarke.Location = new Point(214, 101);
             cmbMarke.Name = "cmbMarke";
             cmbMarke.Size = new Size(121, 23);
             cmbMarke.TabIndex = 4;
             // 
-            // textBox1
+            // txtPreis
             // 
-            textBox1.Location = new Point(216, 144);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 5;
-            textBox1.TextChanged += textBox1_TextChanged;
+            txtPreis.Location = new Point(216, 144);
+            txtPreis.Name = "txtPreis";
+            txtPreis.Size = new Size(100, 23);
+            txtPreis.TabIndex = 5;
             // 
             // lblAntrieb
             // 
@@ -162,26 +161,27 @@
             chkSitzheizung.Text = "Sitzheizung";
             chkSitzheizung.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnCreate
             // 
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            button1.Location = new Point(396, 359);
-            button1.Name = "button1";
-            button1.Size = new Size(130, 34);
-            button1.TabIndex = 12;
-            button1.Text = "Hinzufuegen";
-            button1.UseVisualStyleBackColor = true;
+            btnCreate.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            btnCreate.Location = new Point(396, 359);
+            btnCreate.Name = "btnCreate";
+            btnCreate.Size = new Size(130, 34);
+            btnCreate.TabIndex = 12;
+            btnCreate.Text = "Hinzufuegen";
+            btnCreate.UseVisualStyleBackColor = true;
+            btnCreate.Click += btnCreate_Click;
             // 
-            // button2
+            // btnCancel
             // 
-            button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            button2.Location = new Point(559, 359);
-            button2.Name = "button2";
-            button2.Size = new Size(130, 34);
-            button2.TabIndex = 13;
-            button2.Text = "Abbrechen";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            btnCancel.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            btnCancel.Location = new Point(559, 359);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(130, 34);
+            btnCancel.TabIndex = 13;
+            btnCancel.Text = "Abbrechen";
+            btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Click += btnCancel_Click;
             // 
             // lblBaujahr
             // 
@@ -208,15 +208,15 @@
             ClientSize = new Size(800, 450);
             Controls.Add(cmbBaujahr);
             Controls.Add(lblBaujahr);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnCancel);
+            Controls.Add(btnCreate);
             Controls.Add(chkSitzheizung);
             Controls.Add(chkKlima);
             Controls.Add(rdoDiesel);
             Controls.Add(rdoBenzin);
             Controls.Add(lblExtras);
             Controls.Add(lblAntrieb);
-            Controls.Add(textBox1);
+            Controls.Add(txtPreis);
             Controls.Add(cmbMarke);
             Controls.Add(txtModell);
             Controls.Add(label3);
@@ -235,15 +235,15 @@
         private Label label3;
         private TextBox txtModell;
         private ComboBox cmbMarke;
-        private TextBox textBox1;
+        private TextBox txtPreis;
         private Label lblAntrieb;
         private Label lblExtras;
         private RadioButton rdoBenzin;
         private RadioButton rdoDiesel;
         private CheckBox chkKlima;
         private CheckBox chkSitzheizung;
-        private Button button1;
-        private Button button2;
+        private Button btnCreate;
+        private Button btnCancel;
         private Label lblBaujahr;
         private ComboBox cmbBaujahr;
     }

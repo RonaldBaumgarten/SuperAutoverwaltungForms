@@ -33,7 +33,9 @@
             btnAdd = new Button();
             btnUpdate = new Button();
             btnDelete = new Button();
-            listBox1 = new ListBox();
+            lst = new ListBox();
+            label3 = new Label();
+            lblGesamtwert = new Label();
             SuspendLayout();
             // 
             // label1
@@ -76,6 +78,7 @@
             btnUpdate.TabIndex = 3;
             btnUpdate.Text = "bearbeiten";
             btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // btnDelete
             // 
@@ -86,22 +89,45 @@
             btnDelete.TabIndex = 4;
             btnDelete.Text = "loeschen";
             btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
-            // listBox1
+            // lst
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(302, 139);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(287, 229);
-            listBox1.TabIndex = 5;
+            lst.FormattingEnabled = true;
+            lst.ItemHeight = 15;
+            lst.Location = new Point(302, 139);
+            lst.Name = "lst";
+            lst.Size = new Size(287, 229);
+            lst.TabIndex = 5;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F);
+            label3.Location = new Point(302, 396);
+            label3.Name = "label3";
+            label3.Size = new Size(97, 21);
+            label3.TabIndex = 6;
+            label3.Text = "Gesamtwert:";
+            // 
+            // lblGesamtwert
+            // 
+            lblGesamtwert.AutoSize = true;
+            lblGesamtwert.BackColor = SystemColors.ControlLightLight;
+            lblGesamtwert.Font = new Font("Segoe UI", 12F);
+            lblGesamtwert.Location = new Point(492, 396);
+            lblGesamtwert.Name = "lblGesamtwert";
+            lblGesamtwert.Size = new Size(0, 21);
+            lblGesamtwert.TabIndex = 7;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(656, 452);
-            Controls.Add(listBox1);
+            Controls.Add(lblGesamtwert);
+            Controls.Add(label3);
+            Controls.Add(lst);
             Controls.Add(btnDelete);
             Controls.Add(btnUpdate);
             Controls.Add(btnAdd);
@@ -120,6 +146,8 @@
         private Button btnAdd;
         private Button btnUpdate;
         private Button btnDelete;
-        private ListBox listBox1;
+        private ListBox lst;
+        private Label label3;
+        private Label lblGesamtwert;
     }
 }
