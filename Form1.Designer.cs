@@ -36,6 +36,9 @@
             lst = new ListBox();
             label3 = new Label();
             lblGesamtwert = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            lblAnzahl = new Label();
             SuspendLayout();
             // 
             // label1
@@ -95,7 +98,7 @@
             // 
             lst.FormattingEnabled = true;
             lst.ItemHeight = 15;
-            lst.Location = new Point(302, 139);
+            lst.Location = new Point(302, 117);
             lst.Name = "lst";
             lst.Size = new Size(287, 229);
             lst.TabIndex = 5;
@@ -104,7 +107,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F);
-            label3.Location = new Point(302, 396);
+            label3.Location = new Point(302, 394);
             label3.Name = "label3";
             label3.Size = new Size(97, 21);
             label3.TabIndex = 6;
@@ -115,16 +118,50 @@
             lblGesamtwert.AutoSize = true;
             lblGesamtwert.BackColor = SystemColors.ControlLightLight;
             lblGesamtwert.Font = new Font("Segoe UI", 12F);
-            lblGesamtwert.Location = new Point(492, 396);
+            lblGesamtwert.Location = new Point(492, 384);
             lblGesamtwert.Name = "lblGesamtwert";
             lblGesamtwert.Size = new Size(0, 21);
             lblGesamtwert.TabIndex = 7;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F);
+            label4.Location = new Point(302, 359);
+            label4.Name = "label4";
+            label4.Size = new Size(60, 21);
+            label4.TabIndex = 8;
+            label4.Text = "Anzahl:";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = SystemColors.ControlLightLight;
+            label5.Font = new Font("Segoe UI", 12F);
+            label5.Location = new Point(328, 204);
+            label5.Name = "label5";
+            label5.Size = new Size(0, 21);
+            label5.TabIndex = 9;
+            // 
+            // lblAnzahl
+            // 
+            lblAnzahl.AutoSize = true;
+            lblAnzahl.BackColor = SystemColors.ControlLightLight;
+            lblAnzahl.Font = new Font("Segoe UI", 12F);
+            lblAnzahl.Location = new Point(530, 359);
+            lblAnzahl.Name = "lblAnzahl";
+            lblAnzahl.Size = new Size(19, 21);
+            lblAnzahl.TabIndex = 10;
+            lblAnzahl.Text = "0";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(656, 452);
+            Controls.Add(lblAnzahl);
+            Controls.Add(label5);
+            Controls.Add(label4);
             Controls.Add(lblGesamtwert);
             Controls.Add(label3);
             Controls.Add(lst);
@@ -149,5 +186,8 @@
         private ListBox lst;
         private Label label3;
         private Label lblGesamtwert;
+        private Label label4;
+        private Label label5;
+        private Label lblAnzahl;
     }
 }

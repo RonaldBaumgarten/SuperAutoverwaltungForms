@@ -43,6 +43,7 @@ namespace AutoverwaltungForms
             {
                 lst.Items.Add(a.autoInfo());
             }
+            lblAnzahl.Text = autos.Count.ToString();
             lblGesamtwert.Text = getGesamtwert().ToString();
         }
 
