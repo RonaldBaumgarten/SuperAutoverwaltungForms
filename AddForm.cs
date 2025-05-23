@@ -39,7 +39,10 @@ namespace AutoverwaltungForms
             index = ind;
 
             if (edit)
+            {
                 btnCreate.Text = "Aendern";
+                fill();
+            }
 
             for (int i = 2025; i >= 1950; i--)
             {
@@ -103,7 +106,33 @@ namespace AutoverwaltungForms
         {
             this.Close();
         }
-
+    
+        private void fill()
+        {
+            auto = autos[index];
+            txtModell.Text = autos[index].Modellname;
+            cmbMarke.Text = autos[index].Marke;
+            txtPreis.Text = autos[index].Preis.ToString();
+            cmbBaujahr.Text = autos[index].Marke.ToString();
+            if (auto.Antrieb.Equals("Benzin"))
+            {
+                rdoBenzin.Checked = true;
+                //rdoDiesel.Checked = false;
+            }
+            else
+            {
+                //rdoBenzin.Checked = false;
+                rdoDiesel.Checked = true;
+            }
+            if (auto.Extras.Contains("Klimaanlage"))
+            {
+                chkKlima.Checked = true;
+            }
+            if (auto.Extras.Contains("Sitzheizung"))
+            {
+                chkSitzheizung.Checked = true;
+            }
+        }
 
 
     }

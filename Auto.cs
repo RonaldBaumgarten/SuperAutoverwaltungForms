@@ -19,6 +19,8 @@ namespace AutoverwaltungForms
         public double Preis { get => preis; set => preis = value; }
         public string Modellname { get => modellname; set => modellname = value; }
         public int Baujahr { get => baujahr; set => baujahr = value; }
+        public string Antrieb { get => antrieb; set => antrieb = value; }
+        public string Extras { get => extras; set => extras = value; }
 
         public Auto(string marke, double preis, string modellname, int baujahr, string antrieb, string extras)
         {
