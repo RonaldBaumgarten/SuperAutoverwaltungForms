@@ -14,6 +14,8 @@ namespace AutoverwaltungForms
     {
         private Auto auto;
         private List<Auto> autos;
+        int index;
+        bool edit;
 
         public Auto Auto { get => auto; set => auto = value; }
 
@@ -21,6 +23,23 @@ namespace AutoverwaltungForms
         {
             InitializeComponent();
             autos = a;
+            edit = false;
+
+            for (int i = 2025; i >= 1950; i--)
+            {
+                cmbBaujahr.Items.Add(i);
+            }
+        }
+
+        public AddForm(List <Auto> a, bool e, int ind)
+        {
+            InitializeComponent();
+            autos = a;
+            edit = e;
+            index = ind;
+
+            if (edit)
+                btnCreate.Text = "Aendern";
 
             for (int i = 2025; i >= 1950; i--)
             {
@@ -71,7 +90,10 @@ namespace AutoverwaltungForms
 
             auto = new Auto(ma,p,mo, baujahr,autoart,extras);
 
-            autos.Add(auto);
+            if (edit)
+                autos[index] = auto;
+            else
+                autos.Add(auto);
          
             this.DialogResult = DialogResult.OK;
             this.Close();
@@ -81,5 +103,8 @@ namespace AutoverwaltungForms
         {
             this.Close();
         }
+
+
+
     }
 }

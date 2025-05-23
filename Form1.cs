@@ -55,7 +55,11 @@ namespace AutoverwaltungForms
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            if (lst.SelectedIndex == -1) return;
 
+            AddForm af = new AddForm(autos, true, lst.SelectedIndex);
+            af.ShowDialog();
+            updateList();
         }
     }
 }
